@@ -1,0 +1,105 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=GBK">
+        <title>LCD Image Retention Test</title>
+        <style type="text/css">
+            #ippromo { 
+                display: none;
+                font-size: 13px; 
+                font-weight: normal; 
+                margin-top: 1em;
+            }
+        
+            body.gray {
+                font-family: Helvetica, sans-serif;
+                background-color: #444;
+            }
+            body.checker {
+                font-family: Helvetica, sans-serif;
+                background-size: 200px 200px;
+                background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAGQCAIAAAAP3aGbAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpBOTU1ODk4MEY5RkIxMUUxOTA5RDlENzgzQjA5NjI4MSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpBOTU1ODk4MUY5RkIxMUUxOTA5RDlENzgzQjA5NjI4MSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkRFQTRFQjdGRjgzOTExRTE5MDlEOUQ3ODNCMDk2MjgxIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkRFQTRFQjgwRjgzOTExRTE5MDlEOUQ3ODNCMDk2MjgxIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+NFYnhgAAA/JJREFUeNrs1sEJADAMA7G6++/sLpE8CtIIJhzJgQVtjcC4awJAsAAECxAsAMECECxAsAAEC0CwAMECECwAwQIEC0CwAAQLECwAwQIQLECwAAQLQLAAwQIQLADBAgQLQLAABAsQLADBAgQLQLAABAsQLADBAhAsQLAABAtAsADBAhAsAMECBAtAsAAECxAsAMECECxAsAAEC0CwAMECECwAwQIEC0CwAAQLECwAwQIEC0CwAAQLECwAwQIQLECwAAQLQLAAwQIQLADBAgQLQLAABAsQLADBAhAsQLAABAtAsADBAhAsAMECBAtAsAAECxAsAMECBAtAsAAECxAsAMECECxAsAAEC0CwAMECECwAwQIEC0CwAAQLECwAwQIQLECwAAQLQLAAwQIQLADBAgQLQLAABAsQLADBAgQLQLAABAsQLADBAhAsQLAABAtAsADBAhAsAMECBAtAsAAECxAsAMECECxAsAAEC0CwAMECECwAwQIEC0CwAAQLECwAwQIEC0CwAAQLECwAwQIQLECwAAQLQLAAwQIQLADBAgQLQLAABAsQLADBAhAsQLAABAtAsADBAhAsAMECBAtAsAAECxAsAMECBAtAsAAECxAsAMECECxAsAAEC0CwAMECECwAwQIEC0CwAAQLECwAwQIQLECwAAQLQLAAwQIQLADBAgQLYE/aWoH5w0qMgA8LECwAwQIQLECwAAQLQLAAwQIQLADBAgQLQLAABAsQLADBAhAsQLAABAtAsADBAhAsAMECBAtAsAAECxAsAMECECxAsAAECxAsAMECECxAsAAEC0CwAMECECwAwQIEC0CwAAQLECwAwQIQLECwAAQLQLAAwQIQLADBAgQLQLAABAsQLADBAgTLBIBgAQgWIFgAggUgWIBgAQgWgGABggUgWACCBQgWgGABCBYgWACCBSBYgGABCBaAYAGCBSBYAIIFCBaAYAEIFiBYAIIFCBaAYAEIFiBYAIIFIFiAYAEIFoBgAYIFIFgAggUIFoBgAQgWIFgAggUgWIBgAQgWgGABggUgWACCBQgWgGABCBYgWACCBQgWgGABCBYgWACCBSBYgGABCBaAYAGCBSBYAIIFCBaAYAEIFiBYAIIFIFiAYAEIFoBgAYIFIFgAggUIFoBgAQgWIFgAggUIFoBgAQgWIFgAggUgWIBgAQgWgGABggUgWACCBQgWgGABCBYgWACCBSBYgGABCBaAYAGCBSBYAIIFCBaAYAEIFiBYAIIFCBaAYAEIFiBYAIIFIFiAYAEIFoBgAYIFIFgAggUIFoBgAQgWIFgAggUgWIBgAQgWgGABggUgWACCBQgWgGABCBbwkyfAANrVCRzP2ChSAAAAAElFTkSuQmCC');
+            }
+            
+            h1 {
+                text-align: center;
+                padding: 30px 20px 20px 20px;
+                border-radius: 20px;
+                border: 2px solid #ccc;
+                background-color: #eee;
+                margin: -25px auto;
+                width: 600px;
+                font-size: 20px;
+            }            
+        </style>
+        <script type="text/javascript">
+            var startTimeMS = (new Date()).getTime();
+            function countUp()
+            {
+                if (document.body.getAttribute('class') != 'checker') {
+                    document.getElementById('elapsed').innerHTML = ' ';
+                    return;
+                }
+                
+                var elapsed = Math.floor(((new Date()).getTime() - startTimeMS) / 1000);
+                var ss = elapsed % 60;
+                var mm = Math.floor(elapsed / 60);
+                
+                document.getElementById('elapsed').innerHTML = mm + ':' + (ss < 10 ? '0' + ss : ss);
+                window.setTimeout(countUp, 1000);
+                
+                if (elapsed > 600 && document.body.getAttribute('class') != 'gray') toggle();
+            }
+            
+            function toggle()
+            {
+                if (document.body.getAttribute('class') == 'gray') {
+                    document.body.setAttribute('class', 'checker');
+                    document.getElementById('sw').innerHTML = 'Switch to gray';
+                    document.getElementById('ippromo').style.display = 'none';
+                    startTimeMS = (new Date()).getTime();
+                    countUp();
+                } else {
+                    document.body.setAttribute('class', 'gray');
+                    document.getElementById('sw').innerHTML = 'Switch to grid';
+                    document.getElementById('elapsed').innerHTML = ' ';
+                    document.getElementById('ippromo').style.display = 'block';
+                }
+            }
+            
+            function startConfirm()
+            {
+                if (confirm('I don\'t believe that this can cause permanent damage to your screen, but I cannot be sure. By using this, you agree not to hold me responsible for any damage that you may incur. Do you agree to these terms?')) {
+                    toggle();
+                    countUp();
+                }
+            }
+        </script>
+    <style type="text/css">#htmlToothbrush #bodyToothbrush .parentToothbrush .bilibili-player-video {margin:0 !important;}
+#htmlToothbrush, #bodyToothbrush {overflow:hidden !important;zoom:100% !important;}
+#htmlToothbrush #bodyToothbrush .parentToothbrush {overflow:visible !important;z-index:auto !important;transform:none !important;-webkit-transform-style:flat !important;transition:none !important;contain:none !important;}
+#htmlToothbrush #bodyToothbrush .absoluteToothbrush {position:absolute !important;}
+#htmlToothbrush #bodyToothbrush .playerToothbrush {position:fixed !important;top:0px !important;left:0px !important;width:100vw !important;height:100vh !important;max-width:none !important;max-height:none !important;min-width:0 !important;min-height:0 !important;margin:0 !important;padding:0 !important;z-index:2147483647 !important;border:none !important;background-color:#000 !important;transform:none !important;}
+#htmlToothbrush #bodyToothbrush .parentToothbrush video {object-fit:contain !important;}
+#htmlToothbrush #bodyToothbrush .parentToothbrush .videoToothbrush {width:100vw !important;height:100vh !important;}
+#playerControlBtn {text-shadow: none;visibility:hidden;opacity:0;display:none;transition: all 0.5s ease;cursor: pointer;font: 12px "微软雅黑";margin:0;width:64px;height:20px;line-height:20px;border:none;text-align: center;position: fixed;z-index:2147483647;background-color: #27A9D8;color: #FFF;} #playerControlBtn:hover {visibility:visible;opacity:1;background-color:#2774D8;}
+#picinpicBtn {text-shadow: none;visibility:hidden;opacity:0;display:none;transition: all 0.5s ease;cursor: pointer;font: 12px "微软雅黑";margin:0;width:53px;height:20px;line-height:20px;border:none;text-align: center;position: fixed;z-index:2147483647;background-color: #27A9D8;color: #FFF;} #picinpicBtn:hover {visibility:visible;opacity:1;background-color:#2774D8;}
+#leftFullStackButton{display:none;position:fixed;width:1px;height:100vh;top:0;left:0;z-index:2147483647;background:#000;}
+#rightFullStackButton{display:none;position:fixed;width:1px;height:100vh;top:0;right:0;z-index:2147483647;background:#000;}</style></head>
+    <body onload="window.setTimeout(startConfirm, 500);" class="checker">
+        <h1 id="h">
+            <div style="font-size: 13px; font-weight: normal; margin-bottom: 1em;">
+                Make the window as large as possible, display the grid for up to 10 minutes, and then switch to gray.
+                Screens with image retention will show a faint impression of the grid on the gray background.<br>
+                <b>By using this, you agree that I AM NOT RESPONSIBLE for any damage you may incur.</b>
+                <br><br>
+                <b style="color: #d00;">Look away during the test</b> so your eyes don't get fooled at the end.
+            </div>
+            <a href="javascript:toggle()" id="sw">Switch to gray</a>
+            <br>
+            <div id="elapsed">0:21</div>
+            <div id="ippromo" style="display: none;">
+                If this proves useful to you, I'd love if you <a href="https://itunes.apple.com/us/app/overcast-podcast-player/id888422857?ls=1&amp;mt=8&amp;at=11lIuy&amp;ct=rmbp-irtest">tried Overcast</a>. Thanks.
+            </div>
+        </h1>
+    
+
+<tbdiv id="picinpicBtn"></tbdiv><tbdiv id="playerControlBtn"></tbdiv><tbdiv id="leftFullStackButton"></tbdiv><tbdiv id="rightFullStackButton"></tbdiv></body></html>
